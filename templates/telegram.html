@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}Telegram Groups{% endblock title %}
+{% block body1 %}
+<div class="container text-center bg-warning mb-1" id="header">Join our Telegram Groups</div>
+{% endblock body1 %}
+{% block body2 %}
+<div class="row row-cols-1 row-cols-md-3 g-4">
+{% for object in objects %}
+  <div class="col">
+    <div class="card">
+      <img src="/media/{{object.Groupimg}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{object.Groupname}}</h5>
+        <p class="card-text">{{object.Groupdesc}}</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}
+</div>{% endblock body2 %}
